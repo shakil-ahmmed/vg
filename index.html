@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>Video Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    
+        <div class="container"> 
+            <h1>A Video Gallery</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="feature-img">
+                        <img src="pic1.png" width="100%">
+                        <img src="play.png" class="play-btn" onclick="playVideo('Man%20Texting%20On%20The%20Street.mp4')">
+                    
+                    </div>
+                    <div class="col">
+                        <div class="small-img-row">
+                            <div class="small-img">
+                                <img src="pic2.png">
+                                <img src="play.png" class="play-btn" onclick="playVideo('production ID_3819342.mp4')">
+                            </div>
+                            <p>How to add Musltiple-Videos</p>
+                        </div>
+                        <div class="small-img-row">
+                            <div class="small-img">
+                                <img src="pic3.png">
+                                <img src="play.png" class="play-btn" onclick="playVideo('production ID_4465352.mp4')">
+                            </div>
+                            <p>How to add Musltiple-Videos</p>
+                        </div>
+                        <div class="small-img-row">
+                            <div class="small-img">
+                                <img src="pic4.png">
+                                <img src="play.png" class="play-btn" onclick="playVideo('video.mp4)" >
+                            </div>
+                            <p>How to add Musltiple-Videos</p>
+                        </div>
+                    
+                    </div>
+                
+                </div>
+            
+            </div>
+        </div>
+        <div class="video-player" id="videoPlayer">
+            <video width="100%" controls autoplay id="myVideo">
+                <source src="Man%20Texting%20On%20The%20Street.mp4" type="video/mp4">
+            </video>
+            <img src="close.png" class="close-btn" 
+            onclick="stopVideo()">
+        </div>
+        
+        <script>
+            var videoPlayer = document.getElementById("videoPlayer");
+            var myVideo = document.getElementById("myPlayer");
+        
+            function stopVideo(){
+                
+                videoPlayer.style.display = "none";   
+                
+            }
+            function playVideo(file){
+                myVideo.src = file;
+                videoPlayer.style.display = "block";
+            }
+        
+        </script>
+    
+    </body>
+</html>
